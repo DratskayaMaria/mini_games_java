@@ -18,3 +18,28 @@ ___
 
 ### Context diagram
 ![c4](https://user-images.githubusercontent.com/71705648/138077685-03d1eca7-0bae-4ec9-8b81-901977123532.png)
+
+___
+
+### Сборка
+
+Для сборки использовали команду:
+`mvn package`
+
+Для запуска тестов использовали команду:
+`mvn test`
+
+Для запуска программы использовали команду:
+`java -jar target/hope-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
+___
+
+### Контейниризация Docker
+
+Генерация образа: `docker build .`
+
+Команда для того, чтобы увидеть созданный образ: `docker images`
+
+Сборка образа с помощью команды: `mvn dockerfile:build`
+
+Команда для запуска образа: `docker run`
