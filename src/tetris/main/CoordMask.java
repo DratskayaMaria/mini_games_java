@@ -224,6 +224,7 @@ public enum CoordMask {
     CoordMask(GenerationDelegate forms){
         this.forms = forms;
     }
+
     public Coord[] generateFigure(Coord initialCoord, RotationMode rotation){
         return this.forms.generateFigure(initialCoord, rotation);
     }

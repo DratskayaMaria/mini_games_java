@@ -4,8 +4,9 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
+
 public class Game2048 extends JPanel {
-    enum State {
+    public enum State {
         start, won, running, over
     }
     final Color[] colorTable = {
@@ -15,14 +16,14 @@ public class Game2048 extends JPanel {
             new Color(0xbe5e56), new Color(0x9c3931), new Color(0x701710)};
     final static int target = 2048;
     static int highest;
-    static int score;
+    public static int score;
     private Color gridColor = new Color(0xBBADA0);
     private Color emptyColor = new Color(0xCDC1B4);
     private Color startColor = new Color(0xFFEBCD);
     private Random rand = new Random();
-    private Tile[][] tiles;
+    public  Tile[][] tiles;
     private int side = 4;
-    private State gamestate = State.start;
+    public State gamestate = State.start;
     private boolean checkingAvailableMoves;
     public Game2048() {
         setPreferredSize(new Dimension(900, 700));
@@ -65,7 +66,7 @@ public class Game2048 extends JPanel {
                 RenderingHints.VALUE_ANTIALIAS_ON);
         drawGrid(g);
     }
-    void startGame() {
+    public void startGame() {
         if (gamestate != State.running) {
             score = 0;
             highest = 0;
@@ -118,7 +119,7 @@ public class Game2048 extends JPanel {
         int y = 115 + r * 121 + (asc + (106 - (asc + dec)) / 2);
         g.drawString(s, x, y);
     }
-    private void addRandomTile() {
+    public void addRandomTile() {
         int pos = rand.nextInt(side * side);
         int row, col;
         do {
@@ -196,7 +197,7 @@ public class Game2048 extends JPanel {
                 if (tile != null)
                     tile.setMerged(false);
     }
-    boolean movesAvailable() {
+    public boolean movesAvailable() {
         checkingAvailableMoves = true;
         boolean hasMoves = moveUp() || moveDown() || moveLeft() || moveRight();
         checkingAvailableMoves = false;

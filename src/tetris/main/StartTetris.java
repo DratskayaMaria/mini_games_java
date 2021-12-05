@@ -5,8 +5,6 @@ import tetris.graphics.lwjglmodule.LwjglGraphicsModule;
 import tetris.keyboard.KeyboardHandleModule;
 import tetris.keyboard.lwjglmodule.LwjglKeyboardHandleModule;
 
-import javax.swing.*;
-
 import static tetris.main.Constants.BOOST_MULTIPLIER;
 import static tetris.main.Constants.FPS;
 import static tetris.main.Constants.FRAMES_PER_MOVE;

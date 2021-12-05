@@ -8,10 +8,12 @@ public enum RotationMode {
 
 
     // Количество поворотов против часовой стрелки, необходимое для принятия положения
-    private int number;
+    public int number;
+
     RotationMode(int number){
         this.number = number;
     }
+
     private static RotationMode[] rotationByNumber = {NORMAL, FLIP_CCW, INVERT, FLIP_CW};
 
     public static RotationMode getNextRotationFrom(RotationMode perviousRotation) {
