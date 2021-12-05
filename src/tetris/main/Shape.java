@@ -19,6 +19,14 @@ public class Shape {
         this.form = form;
     }
 
+    public ShapeForm getForm() {
+        return form;
+    }
+
+    public void setForm(ShapeForm form) {
+        this.form = form;
+    }
+
     public Coord[] getCoords(){
         return form.getMask().generateFigure(metaPointCoords, currentRotation);
     }
